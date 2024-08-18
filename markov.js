@@ -1,9 +1,8 @@
 /** Textual markov chain generator */
 
-
 class MarkovMachine {
 
-  /** build markov machine; read in text.*/
+  /** build markov machine; read in text. */
 
   constructor(text) {
     let words = text.split(/[ \r\n]+/);
@@ -30,8 +29,6 @@ class MarkovMachine {
     }
   }
 
-
-
   /** return random text from chains */
 
   makeText(numWords = 100) {
@@ -55,6 +52,5 @@ class MarkovMachine {
   }
 }
 
-// Example usage
-let mm = new MarkovMachine("the cat in the hat");
-console.log(mm.makeText());
+// Export the MarkovMachine class
+module.exports = MarkovMachine;
